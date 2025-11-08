@@ -1,6 +1,6 @@
 # FocusRead - Speed Reading Extension
-
-![FocusRead Demo](URL_DEL_GIF_DEMO_AQUI)  <!-- Reemplaza esto con un GIF que muestre la extensión en acción -->
+![FocusRead Demo ico] (./popup-icon.gif)
+![FocusRead Demo](./FocusRead-anime.gif)  
 
 **[English](#english) | [Español](#español)**
 
