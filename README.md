@@ -1,5 +1,5 @@
 # FocusRead - Speed Reading Extension
-![FocusRead Demo ico] (./popup-icon.gif)
+![FocusRead Demo](./popup-icon.gif)
 ![FocusRead Demo](./FocusRead-anime.gif)  
 
 **[English](#english) | [Español](#español)**
