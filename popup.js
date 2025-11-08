@@ -1,22 +1,25 @@
 const ppmSlider = document.getElementById('ppmSlider');
 const ppmValueSpan = document.getElementById('ppmValue');
+const resetButton = document.getElementById('resetButton'); // Obtenemos el nuevo botón
+
+const DEFAULT_PPM = 250;
 
 // --- CARGAR EL VALOR GUARDADO ---
-// Cuando el popup se abre, pedimos a Chrome el valor de 'ppm' que tenemos guardado.
-chrome.storage.sync.get(['ppm'], (result) => {
-  // Si hay un valor guardado, lo usamos. Si no, usamos 250 por defecto.
-  const savedPpm = result.ppm || 250;
-  ppmSlider.value = savedPpm;
-  ppmValueSpan.textContent = savedPpm;
+chrome.storage.sync.get({ ppm: DEFAULT_PPM }, (result) => {
+  ppmSlider.value = result.ppm;
+  ppmValueSpan.textContent = result.ppm;
 });
 
-// --- GUARDAR EL VALOR AL CAMBIAR ---
-// Añadimos un 'escuchador' que se activa cada vez que el usuario mueve el deslizador.
+// --- GUARDAR EL VALOR AL CAMBIAR EL SLIDER ---
 ppmSlider.addEventListener('input', () => {
   const newPpm = ppmSlider.value;
   ppmValueSpan.textContent = newPpm;
-  
-  // Guardamos el nuevo valor en el almacenamiento de Chrome.
-  // 'chrome.storage.sync' lo sincronizará entre los dispositivos del usuario.
-  chrome.storage.sync.set({ ppm: newPpm });
+  chrome.storage.sync.set({ ppm: parseInt(newPpm, 10) });
+});
+
+// --- MANEJAR EL CLIC EN EL BOTÓN DE RESTAURAR ---
+resetButton.addEventListener('click', () => {
+  ppmSlider.value = DEFAULT_PPM;
+  ppmValueSpan.textContent = DEFAULT_PPM;
+  chrome.storage.sync.set({ ppm: DEFAULT_PPM });
 });

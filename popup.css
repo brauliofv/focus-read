@@ -1,0 +1,90 @@
+/* --- ESTILOS GENERALES --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  width: 280px;
+  margin: 0;
+  background-color: #f9f9fb;
+  color: #333;
+}
+
+/* --- CABECERA --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background-color: #f0f0f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 8px; /* Eliminar si no se usa logo */
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.content {
+  padding: 16px;
+  text-align: center;
+}
+
+.content label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+#ppmValue {
+  font-weight: bold;
+  color: #0d94e4; /* Nuestro azul característico */
+}
+
+/* --- ESTILOS DEL SLIDER --- */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #d1eaff;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #0d94e4;
+  cursor: pointer;
+  margin-top: -6px; /* Centrar el thumb verticalmente */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* --- PIE DE PÁGINA Y BOTÓN --- */
+.footer {
+  padding: 0 16px 16px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+#resetButton {
+  font-family: inherit;
+  font-size: 12px;
+  padding: 6px 12px;
+  background-color: #d1eaff;
+  border: 1px solid #b8daff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#resetButton:hover {
+  background-color: #ecc5ea;
+}
