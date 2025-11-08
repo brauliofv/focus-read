@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FocusRead - Configuración</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 250px;
+      padding: 10px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    #ppmValue {
+      font-weight: bold;
+      color: #0d94e4;
+    }
+  </style>
+</head>
+<body>
+  <h3>Velocidad de Lectura</h3>
+  <label for="ppmSlider">
+    Palabras por Minuto: <span id="ppmValue">250</span>
+  </label>
+  <input type="range" id="ppmSlider" min="100" max="900" step="25" value="250">
+  
+  <!-- Importamos el script que le dará vida a esta interfaz -->
+  <script src="popup.js"></script>
+</body>
+</html>
