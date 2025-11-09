@@ -1,25 +1,54 @@
-const ppmSlider = document.getElementById('ppmSlider');
-const ppmValueSpan = document.getElementById('ppmValue');
-const resetButton = document.getElementById('resetButton'); // Obtenemos el nuevo botón
+document.addEventListener('DOMContentLoaded', () => {
+  const ppmSlider = document.getElementById('ppmSlider');
+  const ppmValueSpan = document.getElementById('ppmValue');
+  const colorSwatches = document.querySelectorAll('.color-swatch');
+  const donateButton = document.getElementById('donateButton');
 
-const DEFAULT_PPM = 250;
+  const DEFAULTS = {
+    ppm: 250,
+    color: 'amarillo'
+    // Se elimina fontSize
+  };
 
-// --- CARGAR EL VALOR GUARDADO ---
-chrome.storage.sync.get({ ppm: DEFAULT_PPM }, (result) => {
-  ppmSlider.value = result.ppm;
-  ppmValueSpan.textContent = result.ppm;
-});
+  // Cargar todas las configuraciones guardadas al abrir
+  chrome.storage.sync.get(DEFAULTS, (settings) => {
+    // Actualizar PPM
+    ppmSlider.value = settings.ppm;
+    ppmValueSpan.textContent = settings.ppm;
 
-// --- GUARDAR EL VALOR AL CAMBIAR EL SLIDER ---
-ppmSlider.addEventListener('input', () => {
-  const newPpm = ppmSlider.value;
-  ppmValueSpan.textContent = newPpm;
-  chrome.storage.sync.set({ ppm: parseInt(newPpm, 10) });
-});
+    // Actualizar selección de color
+    updateSelectedUI(colorSwatches, 'color', settings.color);
+  });
 
-// --- MANEJAR EL CLIC EN EL BOTÓN DE RESTAURAR ---
-resetButton.addEventListener('click', () => {
-  ppmSlider.value = DEFAULT_PPM;
-  ppmValueSpan.textContent = DEFAULT_PPM;
-  chrome.storage.sync.set({ ppm: DEFAULT_PPM });
+  // Guardar PPM
+  ppmSlider.addEventListener('input', () => {
+    const newPpm = ppmSlider.value;
+    ppmValueSpan.textContent = newPpm;
+    chrome.storage.sync.set({ ppm: parseInt(newPpm, 10) });
+  });
+
+  // Guardar color
+  colorSwatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      const newColor = swatch.dataset.color;
+      updateSelectedUI(colorSwatches, 'color', newColor);
+      chrome.storage.sync.set({ color: newColor });
+    });
+  });
+
+  // Botón de donar
+  donateButton.addEventListener('click', () => {
+    window.open('https://www.buymeacoffee.com/TU_USUARIO', '_blank');
+  });
+
+  // Función de ayuda para actualizar la UI
+  function updateSelectedUI(elements, dataAttribute, value) {
+    elements.forEach(el => {
+      if (el.dataset[dataAttribute] === value) {
+        el.classList.add('selected');
+      } else {
+        el.classList.remove('selected');
+      }
+    });
+  }
 });

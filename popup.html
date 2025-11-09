@@ -8,20 +8,26 @@
 <body>
 
   <div class="header">
-    <!-- Aquí pondremos el icono cuando lo tengamos -->
-    <!-- <img src="icons/icon48.png" alt="FocusRead Logo" class="logo"> -->
     <h1>FocusRead</h1>
   </div>
 
-  <div class="content">
-    <label for="ppmSlider">
-      Velocidad de Lectura (<span id="ppmValue">250</span> PPM)
-    </label>
+  <div class="section">
+    <label for="ppmSlider">Velocidad (<span id="ppmValue">250</span> PPM)</label>
     <input type="range" id="ppmSlider" min="100" max="900" step="25" value="250">
   </div>
 
+  <div class="section">
+    <label>Color de Resaltado</label>
+    <div class="color-options">
+      <div class="color-swatch selected" data-color="amarillo" style="background-color: #ffd966;" title="Amarillo Clásico"></div>
+      <div class="color-swatch" data-color="celeste" style="background-color: #0d94e4;" title="Celeste Enfocado"></div>
+      <div class="color-swatch" data-color="verde" style="background-color: #93c47d;" title="Verde Calmado"></div>
+      <div class="color-swatch" data-color="magenta" style="background-color: #e06666;" title="Magenta Energético"></div>
+    </div>
+  </div>
+
   <div class="footer">
-    <button id="resetButton" title="Restaurar a 250 PPM">Restaurar</button>
+    <button id="donateButton">❤️ Donate</button>
   </div>
   
   <script src="popup.js"></script>

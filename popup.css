@@ -9,82 +9,80 @@ body {
 
 /* --- CABECERA --- */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 12px;
   background-color: #f0f0f5;
   border-bottom: 1px solid #e0e0e0;
+  text-align: center;
 }
-
 .header h1 {
   font-size: 18px;
   font-weight: 600;
   margin: 0;
-  margin-left: 8px; /* Eliminar si no se usa logo */
 }
 
-/* --- CONTENIDO PRINCIPAL --- */
-.content {
-  padding: 16px;
-  text-align: center;
+/* --- SECCIONES --- */
+.section {
+  padding: 16px; /* Aumentamos el padding vertical para más espacio */
+  border-bottom: 1px solid #eee;
 }
-
-.content label {
+.section:last-of-type {
+  border-bottom: none;
+}
+.section label {
   display: block;
   margin-bottom: 12px;
   font-size: 14px;
+  font-weight: 500;
+  text-align: center;
 }
-
 #ppmValue {
   font-weight: bold;
-  color: #0d94e4; /* Nuestro azul característico */
 }
 
-/* --- ESTILOS DEL SLIDER --- */
-input[type="range"] {
-  -webkit-appearance: none;
-  width: 100%;
-  background: transparent;
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 6px;
-  cursor: pointer;
-  background: #d1eaff;
-  border-radius: 3px;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  background: #0d94e4;
-  cursor: pointer;
-  margin-top: -6px; /* Centrar el thumb verticalmente */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-
-/* --- PIE DE PÁGINA Y BOTÓN --- */
-.footer {
-  padding: 0 16px 16px 16px;
+/* --- OPCIONES DE COLOR --- */
+.color-options {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 0 10px;
 }
-
-#resetButton {
-  font-family: inherit;
-  font-size: 12px;
-  padding: 6px 12px;
-  background-color: #d1eaff;
-  border: 1px solid #b8daff;
-  border-radius: 5px;
+.color-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.2s;
+  border: 3px solid transparent;
+  transition: border-color 0.2s;
+}
+.color-swatch.selected {
+  border-color: #0d94e4;
+  box-shadow: 0 0 5px rgba(13, 148, 228, 0.5);
 }
 
-#resetButton:hover {
-  background-color: #ecc5ea;
+/* --- SLIDER DE VELOCIDAD --- */
+input[type="range"] { -webkit-appearance: none; width: 100%; background: transparent; }
+input[type="range"]::-webkit-slider-runnable-track { width: 100%; height: 6px; cursor: pointer; background: #d1eaff; border-radius: 3px; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; height: 18px; width: 18px; border-radius: 50%; background: #0d94e4; cursor: pointer; margin-top: -6px; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+
+/* --- PIE DE PÁGINA Y BOTÓN DE DONAR --- */
+.footer {
+  padding: 12px 16px;
+  background-color: #f0f0f5;
+}
+#donateButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #FF6B6B, #FFD166);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#donateButton:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
