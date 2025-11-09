@@ -16,7 +16,9 @@ FocusRead is a browser extension designed to enhance your online reading experie
 
 *   **Word-by-Word Highlighting**: Activates a focused reading mode on any selected text.
 *   **Adjustable Speed**: Control the reading pace (Words Per Minute) from a clean popup menu.
-*   **Smart Contrast**: Automatically switches between a light (yellow) and dark (blue) theme for the highlighter based on the website's background color.
+*   **Customizable Highlight Color**: Choose from four different colors (classic yellow, focused blue, calm green, or energetic magenta) to match your style or website theme.
+*   **Smart Pause**: To make reading feel more natural, the extension automatically adds a short pause for commas and a longer pause for sentence-ending punctuation.
+*   **Paragraph Recognition**: Faithfully preserves the original text structure, inserting longer pauses and visual breaks between paragraphs.
 *   **Intuitive Controls**:
     *   Start reading from the right-click context menu.
     *   Click anywhere on the page to **Pause** or **Resume**.
@@ -38,8 +40,8 @@ FocusRead is a browser extension designed to enhance your online reading experie
 
 ### 📖 How to Use
 
-1.  **Set your speed**: Click the FocusRead icon in your browser's toolbar to open the popup and adjust the PPM slider to your desired speed.
-2.  **Select text**: On any webpage, highlight the text you want to read.
+1.  **Customize your experience**: Click the FocusRead icon in your browser's toolbar to open the popup. Adjust the PPM slider to your desired speed and choose your favorite highlight color.
+2.  **Select text**: On any webpage, highlight the text you want to read, even across multiple paragraphs.
 3.  **Start reading**: Right-click on the selected text and choose **"Start reading with FocusRead"**.
 4.  **Pause/Resume**: Simply click anywhere on the page to pause the reader. Click again to resume.
 
@@ -65,7 +67,9 @@ FocusRead es una extensión para navegadores diseñada para mejorar tu experienc
 
 *   **Resaltado Palabra por Palabra**: Activa un modo de lectura enfocada en cualquier texto que selecciones.
 *   **Velocidad Ajustable**: Controla el ritmo de lectura (Palabras Por Minuto) desde un sencillo menú emergente.
-*   **Contraste Inteligente**: Cambia automáticamente entre un tema claro (amarillo) y oscuro (azul) para el resaltador, basándose en el color de fondo del sitio web.
+*   **Color de Resaltado Personalizable**: Elige entre cuatro colores diferentes (amarillo clásico, celeste enfocado, verde calmado o magenta energético) para adaptarlo a tu estilo o al tema del sitio web.
+*   **Pausa Inteligente**: Para que la lectura se sienta más natural, la extensión añade automáticamente una pausa corta para las comas y una pausa más larga para los signos de puntuación que finalizan una oración.
+*   **Reconocimiento de Párrafos**: Mantiene fielmente la estructura del texto original, insertando pausas más largas y saltos visuales entre párrafos.
 *   **Controles Intuitivos**:
     *   Inicia la lectura desde el menú contextual (clic derecho).
     *   Haz clic en cualquier parte de la página para **Pausar** o **Reanudar**.
@@ -87,8 +91,8 @@ FocusRead es una extensión para navegadores diseñada para mejorar tu experienc
 
 ### 📖 Cómo Usar la Extensión
 
-1.  **Ajusta tu velocidad**: Haz clic en el icono de FocusRead en la barra de herramientas para abrir el menú y ajusta el deslizador de PPM a tu velocidad deseada.
-2.  **Selecciona el texto**: En cualquier página web, selecciona el texto que quieras leer.
+1.  **Personaliza tu experiencia**: Haz clic en el icono de FocusRead en la barra de herramientas para abrir el menú. Ajusta el deslizador de PPM a tu velocidad deseada y elige tu color de resaltado favorito.
+2.  **Selecciona el texto**: En cualquier página web, selecciona el texto que quieras leer, incluso si abarca varios párrafos.
 3.  **Inicia la lectura**: Haz clic derecho sobre el texto seleccionado y elige **"Iniciar lectura con FocusRead"**.
 4.  **Pausa/Reanuda**: Simplemente haz clic en cualquier lugar de la página para pausar la lectura. Vuelve a hacer clic para reanudarla.
 
@@ -96,7 +100,7 @@ FocusRead es una extensión para navegadores diseñada para mejorar tu experienc
 
 FocusRead es un proyecto de código abierto y gratuito desarrollado con mucho cariño. Si esta herramienta te resulta útil y quieres apoyar su desarrollo futuro, por favor, considera hacer una pequeña donación. ¡Tu apoyo ayuda a cubrir el tiempo de desarrollo y me permite añadir nuevas funcionalidades!
 
-[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >](https://paypal.me/brauliofv)
+[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !importan;width: 217px !important;" >](https://paypal.me/brauliofv)
 
 ### 📄 Licencia
 
